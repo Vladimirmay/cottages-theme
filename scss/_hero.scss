@@ -1,0 +1,87 @@
+@use "variables" as *;
+
+.section--hero {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.hero {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  &__side {
+    width: 200px;
+    flex-shrink: 0;
+  }
+
+  &__supertitle {
+    font-size: 14px;
+    color: $color-muted;
+    margin: 8px 0 0;
+    line-height: 1.4;
+  }
+
+  &__main {
+    flex-grow: 1;
+    max-width: 620px;
+  }
+
+  &__title {
+    font-size: 52px;
+    line-height: 1.1;
+    font-weight: 700;
+    color: $color-dark;
+    margin: 0 0 24px;
+  }
+
+  &__description {
+    font-size: 16px;
+    color: $color-muted;
+    margin: 0 0 32px;
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: space-between;
+    background: $color-dark;
+    color: #fff;
+    text-decoration: none;
+    padding: 18px 28px;
+    border-radius: 10px;
+    font-size: 16px;
+    min-width: 260px;
+  }
+
+  &__region {
+    width: 200px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-end;
+    font-size: 15px;
+    color: $color-dark;
+    padding: 8px 16px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    height: fit-content;
+  }
+
+  &__image {
+    padding-left: $side-padding;
+    padding-right: $side-padding;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+    }
+  }
+}

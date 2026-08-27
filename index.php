@@ -1,14 +1,15 @@
 <?php
-// Точка входа темы. Пока просто заглушка.
+/**
+ * Запасной шаблон (fallback).
+ * Используется, если не найден более специфичный шаблон.
+ */
+
+get_header();
 ?>
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <?php wp_head(); ?>
-</head>
-<body <?php body_class(); ?>>
-    <h1>Cottages Theme работает 🎉</h1>
-    <?php wp_footer(); ?>
-</body>
-</html>
+
+<section class="section">
+    <h1><?php the_title(); ?></h1>
+</section>
+
+<?php
+get_footer();

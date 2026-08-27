@@ -1,7 +1,169 @@
-/*
-Theme Name: Cottages Theme
-Author: Vladimir May
-Description: Кастомная тема для проекта Investments in Cottages
-Version: 1.0.0
-Text Domain: cottages-theme
-*/
+@font-face {
+  font-family: "NT Somic";
+  src: url("fonts/NTSomic-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NT Somic";
+  src: url("fonts/NTSomic-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NT Somic";
+  src: url("fonts/NTSomic-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "NT Somic", system-ui, -apple-system, sans-serif;
+  color: #333333;
+}
+
+.container {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.site-header {
+  border-bottom: 1px solid #eee;
+}
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding-top: 29px;
+  padding-bottom: 29px;
+}
+.site-header__logo {
+  font-weight: 700;
+  font-size: 22px;
+  text-decoration: none;
+  color: #262626;
+  white-space: nowrap;
+}
+.site-header__nav {
+  display: flex;
+  gap: 32px;
+}
+.site-header__nav a {
+  text-decoration: none;
+  color: #262626;
+  font-size: 15px;
+  font-weight: 400;
+  transition: opacity 0.2s;
+}
+.site-header__nav a:hover {
+  opacity: 0.6;
+}
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  white-space: nowrap;
+}
+.site-header__phone {
+  text-decoration: none;
+  color: #262626;
+  font-weight: 500;
+  font-size: 16px;
+}
+.site-header__btn {
+  text-decoration: none;
+  color: #262626;
+  border: 1px solid #d0d0d0;
+  padding: 12px 14px;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+.site-header__btn:hover {
+  background-color: #262626;
+  color: #fff;
+}
+
+.section--hero {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.hero__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.hero__side {
+  width: 200px;
+  flex-shrink: 0;
+}
+.hero__supertitle {
+  font-size: 14px;
+  color: #8a8a8a;
+  margin: 8px 0 0;
+  line-height: 1.4;
+}
+.hero__main {
+  flex-grow: 1;
+  max-width: 620px;
+}
+.hero__title {
+  font-size: 52px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #262626;
+  margin: 0 0 24px;
+}
+.hero__description {
+  font-size: 16px;
+  color: #8a8a8a;
+  margin: 0 0 32px;
+}
+.hero__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: space-between;
+  background: #262626;
+  color: #fff;
+  text-decoration: none;
+  padding: 18px 28px;
+  border-radius: 10px;
+  font-size: 16px;
+  min-width: 260px;
+}
+.hero__region {
+  width: 200px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-end;
+  font-size: 15px;
+  color: #262626;
+  padding: 8px 16px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  height: fit-content;
+}
+.hero__image {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+.hero__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+/*# sourceMappingURL=style.css.map */

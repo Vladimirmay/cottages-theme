@@ -1,0 +1,26 @@
+{
+  "name": "cottages-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass scss/main.scss:style.css",
+    "watch": "sass --watch scss/main.scss:style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vladimirmay/cottages-theme.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Vladimirmay/cottages-theme/issues"
+  },
+  "homepage": "https://github.com/Vladimirmay/cottages-theme#readme",
+  "devDependencies": {
+    "sass": "^1.103.1"
+  }
+}
