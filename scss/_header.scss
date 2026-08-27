@@ -166,8 +166,8 @@
       }
 
       @media (max-width: $bp-mobile) {
-        padding-left: $side-padding-small;
-        padding-right: $side-padding-small;
+        padding-left: $side-padding-mobile;
+        padding-right: $side-padding-mobile;
       }
     }
   }
@@ -189,7 +189,7 @@
     }
   }
 
-  @media (max-width: $bp-header) {
+  @media (max-width: $bp-tablet) {
     &__nav,
     &__actions {
       display: none;

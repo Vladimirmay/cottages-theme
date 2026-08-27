@@ -15,5 +15,8 @@ vendor/
 Thumbs.db
 *.log
 
+# Редактор
+.vscode/
+
 # Claude Code
 CLAUDE.md

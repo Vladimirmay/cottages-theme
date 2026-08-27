@@ -18,12 +18,23 @@ get_header();
             <p class="hero__description"><?php the_field('hero_description'); ?></p>
             <a href="#contact" class="hero__button">
                 <span><?php the_field('hero_button_text'); ?></span>
-                <span class="hero__button-icon">↓</span>
+                <span class="hero__button-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 15V3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                    </svg>
+                </span>
             </a>
         </div>
 
         <div class="hero__region">
-            <span class="hero__region-icon">◎</span>
+            <span class="hero__region-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 22s7-7.373 7-12.5C19 5.358 15.866 2 12 2S5 5.358 5 9.5C5 14.627 12 22 12 22Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                    <circle cx="12" cy="9.5" r="2.5" stroke="currentColor" stroke-width="1.6"/>
+                </svg>
+            </span>
             <span>Московская область</span>
         </div>
 

@@ -42,8 +42,8 @@ body {
 }
 @media (max-width: 960px) {
   .container {
-    padding-left: 64px;
-    padding-right: 64px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
 @media (max-width: 768px) {
@@ -189,7 +189,7 @@ body {
   color: #262626;
   font-size: 20px;
   font-weight: 500;
-  padding: 20px 64px;
+  padding: 20px 20px;
   border-bottom: 1px solid #eee;
   transition: opacity 0.2s;
 }
@@ -236,9 +236,20 @@ body {
   gap: 40px;
   margin-bottom: 40px;
 }
+@media (max-width: 960px) {
+  .hero__top {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
 .hero__side {
   width: 200px;
   flex-shrink: 0;
+}
+@media (max-width: 960px) {
+  .hero__side {
+    width: auto;
+  }
 }
 .hero__supertitle {
   font-size: 14px;
@@ -246,48 +257,98 @@ body {
   margin: 8px 0 0;
   line-height: 1.4;
 }
+@media (max-width: 960px) {
+  .hero__supertitle {
+    font-size: 12.6px;
+  }
+}
 .hero__main {
   flex-grow: 1;
   max-width: 620px;
 }
+@media (max-width: 960px) {
+  .hero__main {
+    max-width: none;
+  }
+}
 .hero__title {
-  font-size: 52px;
-  line-height: 1.1;
+  font-size: 50px;
+  line-height: 90%;
+  letter-spacing: 1%;
   font-weight: 700;
   color: #262626;
-  margin: 0 0 24px;
+  margin: 0 0 20px;
+}
+@media (max-width: 960px) {
+  .hero__title {
+    font-size: 45px;
+  }
 }
 .hero__description {
   font-size: 16px;
   color: #8a8a8a;
   margin: 0 0 32px;
 }
+@media (max-width: 960px) {
+  .hero__description {
+    font-size: 14.4px;
+  }
+}
 .hero__button {
   display: inline-flex;
   align-items: center;
-  gap: 40px;
-  justify-content: space-between;
+  gap: 12px;
+  justify-content: center;
   background: #262626;
   color: #fff;
   text-decoration: none;
-  padding: 18px 28px;
-  border-radius: 10px;
-  font-size: 16px;
-  min-width: 260px;
+  padding: 17px 24px;
+  font-size: 18px;
+}
+.hero__button:hover {
+  opacity: 0.9;
+}
+@media (max-width: 960px) {
+  .hero__button {
+    font-size: 16.2px;
+  }
+}
+@media (max-width: 768px) {
+  .hero__button {
+    width: 100%;
+  }
+}
+.hero__button-icon {
+  display: flex;
+  flex-shrink: 0;
+}
+.hero__button-icon svg {
+  display: block;
 }
 .hero__region {
-  width: 200px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   justify-content: flex-end;
-  font-size: 15px;
-  color: #262626;
+  font-size: 16px;
+  color: #8a8a8a;
   padding: 8px 16px;
-  border: 1px solid #eee;
-  border-radius: 8px;
   height: fit-content;
+}
+@media (max-width: 960px) {
+  .hero__region {
+    justify-content: flex-start;
+    padding: 0;
+    font-size: 14.4px;
+  }
+}
+.hero__region-icon {
+  display: flex;
+  flex-shrink: 0;
+}
+.hero__region-icon svg {
+  display: block;
 }
 .hero__image {
   padding-left: 80px;
@@ -296,8 +357,22 @@ body {
 .hero__image img {
   width: 100%;
   height: auto;
+  max-height: 500px;
+  object-fit: cover;
   display: block;
-  border-radius: 4px;
+  clip-path: polygon(40px 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0 40px);
+}
+@media (max-width: 960px) {
+  .hero__image {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (max-width: 768px) {
+  .hero__image {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
