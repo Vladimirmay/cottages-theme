@@ -2,12 +2,13 @@
 
 .site-header {
   border-bottom: 1px solid #eee;
+  position: relative;
 
   &__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
+    gap: 10px;
     padding-top: 29px;
     padding-bottom: 29px;
   }
@@ -22,7 +23,7 @@
 
   &__nav {
     display: flex;
-    gap: 32px;
+    gap: 24px;
 
     a {
       text-decoration: none;
@@ -57,11 +58,145 @@
     border: 1px solid #d0d0d0;
     padding: 12px 14px;
     font-size: 14px;
+    text-align: center;
     transition: background-color 0.2s;
 
     &:hover {
       background-color: $color-dark;
       color: $color-white;
+    }
+  }
+
+  // Бургер — виден только на планшете/мобильном
+  &__burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 28px;
+    height: 20px;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $color-dark;
+    }
+  }
+
+  // Полноэкранное мобильное меню
+  &__mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background-color: $color-white;
+    overflow-y: auto;
+
+    &.is-open {
+      display: flex;
+    }
+
+    // Админ-бар WP зафиксирован сверху и не сдвигает fixed-элементы через margin-top на html
+    .admin-bar & {
+      top: 32px;
+
+      @media screen and (max-width: 782px) {
+        top: 46px;
+      }
+    }
+  }
+
+  &__mobile-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 29px;
+    padding-bottom: 29px;
+  }
+
+  &__close {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    span {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $color-dark;
+
+      &:first-child {
+        transform: rotate(45deg);
+      }
+
+      &:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &__mobile-nav {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      text-decoration: none;
+      color: $color-dark;
+      font-size: 20px;
+      font-weight: 500;
+      padding: 20px $side-padding-mobile;
+      border-bottom: 1px solid #eee;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      @media (max-width: $bp-mobile) {
+        padding-left: $side-padding-small;
+        padding-right: $side-padding-small;
+      }
+    }
+  }
+
+  &__mobile-actions {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    .site-header__phone {
+      font-size: 18px;
+    }
+
+    .site-header__btn {
+      padding: 16px;
+    }
+  }
+
+  @media (max-width: $bp-header) {
+    &__nav,
+    &__actions {
+      display: none;
+    }
+
+    &__burger {
+      display: flex;
     }
   }
 }

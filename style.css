@@ -1,3 +1,10 @@
+/*
+Theme Name: Cottages Theme
+Author: Vladimir May
+Description: Кастомная тема для проекта Investments in Cottages
+Version: 1.0.0
+Text Domain: cottages-theme
+*/
 @font-face {
   font-family: "NT Somic";
   src: url("fonts/NTSomic-Regular.woff2") format("woff2");
@@ -33,15 +40,28 @@ body {
   padding-left: 80px;
   padding-right: 80px;
 }
+@media (max-width: 960px) {
+  .container {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 
 .site-header {
   border-bottom: 1px solid #eee;
+  position: relative;
 }
 .site-header__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 10px;
   padding-top: 29px;
   padding-bottom: 29px;
 }
@@ -54,7 +74,7 @@ body {
 }
 .site-header__nav {
   display: flex;
-  gap: 32px;
+  gap: 24px;
 }
 .site-header__nav a {
   text-decoration: none;
@@ -84,11 +104,125 @@ body {
   border: 1px solid #d0d0d0;
   padding: 12px 14px;
   font-size: 14px;
+  text-align: center;
   transition: background-color 0.2s;
 }
 .site-header__btn:hover {
   background-color: #262626;
   color: #fff;
+}
+.site-header__burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 28px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.site-header__burger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #262626;
+}
+.site-header__mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: #fff;
+  overflow-y: auto;
+}
+.site-header__mobile-menu.is-open {
+  display: flex;
+}
+.admin-bar .site-header__mobile-menu {
+  top: 32px;
+}
+@media screen and (max-width: 782px) {
+  .admin-bar .site-header__mobile-menu {
+    top: 46px;
+  }
+}
+.site-header__mobile-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 29px;
+  padding-bottom: 29px;
+}
+.site-header__close {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.site-header__close span {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #262626;
+}
+.site-header__close span:first-child {
+  transform: rotate(45deg);
+}
+.site-header__close span:last-child {
+  transform: rotate(-45deg);
+}
+.site-header__mobile-nav {
+  display: flex;
+  flex-direction: column;
+}
+.site-header__mobile-nav a {
+  text-decoration: none;
+  color: #262626;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 20px 64px;
+  border-bottom: 1px solid #eee;
+  transition: opacity 0.2s;
+}
+.site-header__mobile-nav a:hover {
+  opacity: 0.6;
+}
+@media (max-width: 768px) {
+  .site-header__mobile-nav a {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.site-header__mobile-actions {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.site-header__mobile-actions .site-header__phone {
+  font-size: 18px;
+}
+.site-header__mobile-actions .site-header__btn {
+  padding: 16px;
+}
+@media (max-width: 960px) {
+  .site-header__nav, .site-header__actions {
+    display: none;
+  }
+  .site-header__burger {
+    display: flex;
+  }
 }
 
 .section--hero {

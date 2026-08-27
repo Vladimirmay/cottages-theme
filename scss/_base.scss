@@ -37,4 +37,14 @@ body {
 .container {
   padding-left: $side-padding;
   padding-right: $side-padding;
+
+  @media (max-width: $bp-header) {
+    padding-left: $side-padding-mobile;
+    padding-right: $side-padding-mobile;
+  }
+
+  @media (max-width: $bp-mobile) {
+    padding-left: $side-padding-small;
+    padding-right: $side-padding-small;
+  }
 }
