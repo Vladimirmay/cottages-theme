@@ -1,0 +1,112 @@
+@use "variables" as *;
+
+.site-footer {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @media (max-width: $bp-mobile) {
+      flex-direction: column;
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+  }
+
+  &__logo {
+    flex: 1;
+    order: -2;
+    font-weight: 700;
+    font-size: 22px;
+
+    a {
+      color: $color-dark;
+      text-decoration: none;
+    }
+
+    @media (max-width: $bp-tablet) {
+      flex-basis: 100%;
+    }
+  }
+
+  &__contacts,
+  &__nav,
+  &__address {
+    flex: 1;
+    padding-left: 24px;
+
+    @media (max-width: $bp-mobile) {
+      padding-left: 0;
+    }
+  }
+
+  // На планшете "Наш адрес" и "Контакты" меняются местами, "Навигация" остаётся в центре
+  &__address {
+    @media (max-width: $bp-tablet) and (min-width: ($bp-mobile + 1)) {
+      order: -1;
+      padding-left: 0;
+    }
+  }
+
+  &__contacts {
+    @media (max-width: $bp-tablet) and (min-width: ($bp-mobile + 1)) {
+      order: 1;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    color: $color-muted;
+    margin: 0 0 16px;
+  }
+
+  &__contact-value {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: $color-dark;
+    text-decoration: none;
+    margin: 0 0 8px;
+    transition: opacity 0.2s;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    a {
+      text-decoration: none;
+      color: $color-dark;
+      font-size: 15px;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__address-text {
+    font-size: 15px;
+    color: $color-dark;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  &__hours {
+    font-size: 13px;
+    color: $color-muted;
+    margin: 8px 0 0;
+  }
+}
