@@ -47,17 +47,8 @@ get_header();
     <?php endif; ?>
 </section>
 
-<section id="arenda" class="section section--arenda">
-    <h2>Аренда</h2>
-</section>
 
-<section id="posutochno" class="section section--posutochno">
-    <h2>Посуточно</h2>
-</section>
-
-<section id="zhurnal" class="section section--zhurnal">
-    <h2>Журнал</h2>
-</section>
+<?php get_template_part('template-parts/section-about'); ?>
 
 <?php get_template_part('template-parts/section-cta'); ?>
 
