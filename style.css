@@ -943,4 +943,86 @@ body {
   margin-bottom: 0;
 }
 
+.section--cta {
+  background: #262626;
+  color: #fff;
+  padding: 64px 80px;
+  margin-left: 80px;
+  margin-right: 80px;
+  clip-path: polygon(40px 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0 40px);
+}
+@media (max-width: 960px) {
+  .section--cta {
+    padding: 42px;
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+}
+@media (max-width: 768px) {
+  .section--cta {
+    padding: 42px 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.cta {
+  display: flex;
+  gap: 40px;
+}
+@media (max-width: 960px) {
+  .cta {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+.cta__side {
+  width: 200px;
+  flex-shrink: 0;
+}
+.cta__label {
+  font-size: 14px;
+  color: #aaa;
+}
+.cta__main {
+  flex-grow: 1;
+  max-width: 620px;
+}
+.cta__title {
+  font-size: 41px;
+  line-height: 1.15;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+@media (max-width: 960px) {
+  .cta__title {
+    font-size: 26px;
+  }
+}
+.cta__description {
+  font-size: 16px;
+  color: #aaa;
+  margin: 0 0 32px;
+}
+.cta__button {
+  display: inline-block;
+  width: 308px;
+  text-align: center;
+  border: none;
+  background: #fff;
+  color: #262626;
+  text-decoration: none;
+  padding: 17px;
+  font-size: 18px;
+  transition: opacity 0.2s;
+}
+.cta__button:hover {
+  opacity: 0.9;
+}
+@media (max-width: 768px) {
+  .cta__button {
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

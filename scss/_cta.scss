@@ -1,0 +1,91 @@
+@use "variables" as *;
+
+.section--cta {
+  background: $color-dark;
+  color: $color-white;
+  padding: 64px 80px;
+  margin-left: $side-padding;
+  margin-right: $side-padding;
+  clip-path: polygon(
+    40px 0,
+    100% 0,
+    100% calc(100% - 40px),
+    calc(100% - 40px) 100%,
+    0 100%,
+    0 40px
+  );
+
+  @media (max-width: $bp-tablet) {
+    padding: 42px;
+    margin-left: $side-padding-tablet;
+    margin-right: $side-padding-tablet;
+  }
+
+  @media (max-width: $bp-mobile) {
+    padding: 42px 20px;
+    margin-left: $side-padding-mobile;
+    margin-right: $side-padding-mobile;
+  }
+}
+
+.cta {
+  display: flex;
+  gap: 40px;
+
+  @media (max-width: $bp-tablet) {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__side {
+    width: 200px;
+    flex-shrink: 0;
+  }
+
+  &__label {
+    font-size: 14px;
+    color: #aaa;
+  }
+
+  &__main {
+    flex-grow: 1;
+    max-width: 620px;
+  }
+
+  &__title {
+    font-size: 41px;
+    line-height: 1.15;
+    font-weight: 700;
+    margin: 0 0 12px;
+
+    @media (max-width: $bp-tablet) {
+      font-size: 26px;
+    }
+  }
+
+  &__description {
+    font-size: 16px;
+    color: #aaa;
+    margin: 0 0 32px;
+  }
+
+  &__button {
+    display: inline-block;
+    width: 308px;
+    text-align: center;
+    border: none;
+    background: #fff;
+    color: $color-dark;
+    text-decoration: none;
+    padding: 17px;
+    font-size: 18px;
+    transition: opacity 0.2s;
+    &:hover {
+      opacity: 0.9;
+    }
+
+    @media (max-width: $bp-mobile) {
+      width: 100%;
+    }
+  }
+}
