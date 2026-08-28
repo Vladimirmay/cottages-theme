@@ -59,6 +59,8 @@ get_header();
     <h2>Журнал</h2>
 </section>
 
+<?php get_template_part('template-parts/section-cycle'); ?>
+
 <?php get_template_part('template-parts/section-objects'); ?>
 
 <?php get_template_part('template-parts/section-contact'); ?>
