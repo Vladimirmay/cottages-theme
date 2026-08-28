@@ -67,8 +67,8 @@ get_header();
         </div>
 
         <div class="contact__main">
-            <h2 class="contact__title">Инвестируйте в свою<br>стабильность уже сегодня</h2>
-            <p class="contact__description">Оставьте заявку и наш менеджер вышлет вам презентацию<br>с планами проектов и подробными расчётами</p>
+            <h2 class="contact__title">Инвестируйте в свою стабильность уже сегодня</h2>
+            <p class="contact__description">Оставьте заявку и наш менеджер вышлет вам презентацию с планами проектов и подробными расчётами</p>
 
             <form class="contact-form" id="contactForm" novalidate>
 
