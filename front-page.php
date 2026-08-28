@@ -47,6 +47,7 @@ get_header();
     <?php endif; ?>
 </section>
 
+<?php get_template_part('template-parts/section-reasons'); ?>
 
 <?php get_template_part('template-parts/section-about'); ?>
 

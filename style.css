@@ -1,4 +1,11 @@
 @charset "UTF-8";
+/*
+Theme Name: Cottages Theme
+Author: Vladimir May
+Description: Кастомная тема для проекта Investments in Cottages
+Version: 1.0.0
+Text Domain: cottages-theme
+*/
 @font-face {
   font-family: "NT Somic";
   src: url("fonts/NTSomic-Regular.woff2") format("woff2");
@@ -1129,6 +1136,126 @@ body {
     grid-row: 2;
     height: 240px;
   }
+}
+.section--reasons {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+@media (max-width: 960px) {
+  .section--reasons {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.reasons__head {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+@media (max-width: 960px) {
+  .reasons__head {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+.reasons__label {
+  width: 200px;
+  flex-shrink: 0;
+  font-size: 14px;
+  color: #8a8a8a;
+}
+.reasons__title {
+  font-size: 42px;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #262626;
+  margin: 0;
+}
+@media (max-width: 960px) {
+  .reasons__title {
+    font-size: 30px;
+  }
+}
+.reasons__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: stretch;
+  grid-template-areas: "one   two   four  .   " ".     three .     five";
+  gap: 16px;
+}
+@media (max-width: 960px) {
+  .reasons__grid {
+    display: none;
+  }
+}
+.reasons__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 280px;
+  padding: 24px;
+  background: #f5f5f5;
+  clip-path: polygon(0 0, calc(100% - 32px) 0, 100% 32px, 100% 100%, 0 100%);
+}
+.reasons__card--one {
+  grid-area: one;
+}
+.reasons__card--two {
+  grid-area: two;
+}
+.reasons__card--three {
+  grid-area: three;
+}
+.reasons__card--four {
+  grid-area: four;
+}
+.reasons__card--five {
+  grid-area: five;
+}
+.reasons__card--dark {
+  background: #262626;
+  color: #fff;
+}
+.reasons__card--dark .reasons__card-text {
+  color: #aaa;
+}
+.reasons__number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  background: #fff;
+  color: #262626;
+  font-size: 16px;
+  font-weight: 800;
+}
+.reasons__card-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 24px 0 8px;
+}
+.reasons__card-text {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #8a8a8a;
+  margin: 0;
+}
+.reasons__slider.swiper {
+  display: none;
+  overflow: hidden;
+}
+@media (max-width: 960px) {
+  .reasons__slider.swiper {
+    display: block;
+  }
+}
+.reasons__slider.swiper .swiper-slide {
+  width: 280px;
+  height: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

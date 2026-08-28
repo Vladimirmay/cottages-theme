@@ -1,0 +1,143 @@
+@use "variables" as *;
+
+.section--reasons {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @media (max-width: $bp-tablet) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.reasons {
+  &__head {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+
+    @media (max-width: $bp-tablet) {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  &__label {
+    width: 200px;
+    flex-shrink: 0;
+    font-size: 14px;
+    color: $color-muted;
+  }
+
+  &__title {
+    font-size: 42px;
+    line-height: 1.15;
+    font-weight: 700;
+    color: $color-dark;
+    margin: 0;
+
+    @media (max-width: $bp-tablet) {
+      font-size: 30px;
+    }
+  }
+
+  // Десктоп: bento-сетка 4 колонки x 2 строки,
+  // карточки стоят на позициях 1, 2, 3, 6, 8 — без растягивания на две строки,
+  // остальные ячейки (4, 5, 7) остаются пустыми
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: stretch;
+    grid-template-areas:
+      "one   two   four  .   "
+      ".     three .     five";
+    gap: 16px;
+
+    @media (max-width: $bp-tablet) {
+      display: none;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 280px;
+    padding: 24px;
+    background: #f5f5f5;
+    clip-path: polygon(0 0, calc(100% - 32px) 0, 100% 32px, 100% 100%, 0 100%);
+
+    &--one {
+      grid-area: one;
+    }
+
+    &--two {
+      grid-area: two;
+    }
+
+    &--three {
+      grid-area: three;
+    }
+
+    &--four {
+      grid-area: four;
+    }
+
+    &--five {
+      grid-area: five;
+    }
+
+    &--dark {
+      background: $color-dark;
+      color: $color-white;
+
+      .reasons__card-text {
+        color: #aaa;
+      }
+    }
+  }
+
+  &__number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    border-radius: 2px;
+    background: $color-white;
+    color: $color-dark;
+    font-size: 16px;
+    font-weight: 800;
+  }
+
+  &__card-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 24px 0 8px;
+  }
+
+  &__card-text {
+    font-size: 15px;
+    line-height: 1.5;
+    color: $color-muted;
+    margin: 0;
+  }
+
+  // Планшет/мобилка: слайдер без стрелок навигации.
+  // Специфичность .reasons__slider.swiper нужна, чтобы перебить
+  // "display: block" из CDN-стилей Swiper (та же специфичность, но грузятся позже).
+  &__slider.swiper {
+    display: none;
+    overflow: hidden;
+
+    @media (max-width: $bp-tablet) {
+      display: block;
+    }
+
+    .swiper-slide {
+      width: 280px;
+      height: auto;
+    }
+  }
+}
