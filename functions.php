@@ -22,6 +22,32 @@ function cottages_theme_enqueue_assets() {
         filemtime( get_template_directory() . '/js/header.js' ),
         true
     );
+
+      // Swiper — стили (CDN)
+    wp_enqueue_style(
+        'swiper',
+        'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css',
+        array(),
+        '11'
+    );
+
+    // Swiper — скрипт (CDN)
+    wp_enqueue_script(
+        'swiper',
+        'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
+        array(),
+        '11',
+        true
+    );
+
+      wp_enqueue_script(
+        'cottages-slider',
+        get_template_directory_uri() . '/js/slider.js',
+        array('swiper'),
+        filemtime( get_template_directory() . '/js/slider.js' ),
+        true
+    );
+
      // Библиотека IMask (маска телефона) с CDN
     wp_enqueue_script(
         'imask',
@@ -30,6 +56,7 @@ function cottages_theme_enqueue_assets() {
         '7.6.1',
         true
     );
+    
 
     // Наш скрипт формы (зависит от imask — грузится после него)
     wp_enqueue_script(
@@ -43,6 +70,7 @@ function cottages_theme_enqueue_assets() {
      wp_localize_script('cottages-form', 'cottagesAjax', array(
         'url' => admin_url('admin-ajax.php'),
     ));
+    
 }
 add_action('wp_enqueue_scripts', 'cottages_theme_enqueue_assets');
 
@@ -75,6 +103,8 @@ function cottages_register_application_cpt() {
     register_post_type('application', $args);
 }
 add_action('init', 'cottages_register_application_cpt');
+
+
 
 /**
  * Обработчик отправки формы заявки (AJAX)
@@ -195,3 +225,34 @@ function cottages_application_columns_content($column, $post_id) {
     }
 }
 add_action('manage_application_posts_custom_column', 'cottages_application_columns_content', 10, 2);
+
+/**
+ * Регистрация типа записи "Объекты" (коттеджи для инвестиций)
+ */
+function cottages_register_object_cpt() {
+    $labels = array(
+        'name'          => 'Объекты',
+        'singular_name' => 'Объект',
+        'menu_name'     => 'Объекты',
+        'all_items'     => 'Все объекты',
+        'add_new'       => 'Добавить объект',
+        'add_new_item'  => 'Новый объект',
+        'edit_item'     => 'Редактировать объект',
+        'view_item'     => 'Просмотр объекта',
+        'search_items'  => 'Искать объекты',
+        'not_found'     => 'Объектов не найдено',
+    );
+
+    $args = array(
+        'labels'        => $labels,
+        'public'        => false,      // на сайте отдельными страницами не открываются
+        'show_ui'       => true,       // но управляются через админку
+        'show_in_menu'  => true,
+        'menu_icon'     => 'dashicons-admin-home',
+        'menu_position' => 24,
+        'supports'      => array('title'), // заголовок используем как внутреннее имя объекта
+    );
+
+    register_post_type('object_item', $args);
+}
+add_action('init', 'cottages_register_object_cpt');
