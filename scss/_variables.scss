@@ -1,20 +1,18 @@
-// Шрифт
 $font-main:
   "NT Somic",
   system-ui,
   -apple-system,
   sans-serif;
 
-// Отступы
 $side-padding: 80px;
 $side-padding-tablet: 32px;
 $side-padding-mobile: 20px;
 
-// Брейкпоинты
+$max-content-width: 1920px;
+
 $bp-tablet: 960px;
 $bp-mobile: 768px;
 
-// Цвета
 $color-dark: #262626;
 $color-white: #fff;
 $color-text: #333333;

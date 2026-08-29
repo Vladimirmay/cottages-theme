@@ -3,13 +3,11 @@
  * Часть шаблона: секция "Инвестиционный цикл"
  */
 
-// Собираем этапы из ACF-групп step_1 ... step_5
 $steps = array();
 
 for ($i = 1; $i <= 5; $i++) {
     $group = get_field('step_' . $i);
 
-    // Пропускаем пустой этап (если заголовок не заполнен)
     if (empty($group) || empty($group['title'])) {
         continue;
     }

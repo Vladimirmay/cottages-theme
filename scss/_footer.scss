@@ -42,7 +42,6 @@
     }
   }
 
-  // На планшете "Наш адрес" и "Контакты" меняются местами, "Навигация" остаётся в центре
   &__address {
     @media (max-width: $bp-tablet) and (min-width: ($bp-mobile + 1)) {
       order: -1;

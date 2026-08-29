@@ -1,16 +1,12 @@
 <?php
-/**
- * Функции темы Cottages Theme
- */
 
 // Подключение стилей и скриптов темы
 function cottages_theme_enqueue_assets() {
     // Основной style.css темы
-    // Версия берётся из времени изменения файла, чтобы браузер сразу подхватывал правки при разработке
     wp_enqueue_style(
-        'cottages-theme-style',                                   // уникальный дескриптор (handle)
-        get_stylesheet_uri(),                                     // ссылка на style.css в корне темы
-        array(),                                                  // зависимости (пока нет)
+        'cottages-theme-style',
+        get_stylesheet_uri(),
+        array(),
         filemtime( get_stylesheet_directory() . '/style.css' )
     );
 
@@ -48,7 +44,7 @@ function cottages_theme_enqueue_assets() {
         true
     );
 
-     // Библиотека IMask (маска телефона) с CDN
+     // Библиотека IMask (CDN)
     wp_enqueue_script(
         'imask',
         'https://unpkg.com/imask@7.6.1/dist/imask.min.js',
@@ -58,7 +54,7 @@ function cottages_theme_enqueue_assets() {
     );
     
 
-    // Наш скрипт формы (зависит от imask — грузится после него)
+    // скрипт формы (зависит от imask — грузится после него)
     wp_enqueue_script(
         'cottages-form',
         get_template_directory_uri() . '/js/form.js',
@@ -91,12 +87,12 @@ function cottages_register_application_cpt() {
 
     $args = array(
         'labels'        => $labels,
-        'public'        => false,      // не публичный тип — заявки не показываются на сайте
-        'show_ui'       => true,       // но управляются через админку
+        'public'        => false,
+        'show_ui'       => true,
         'show_in_menu'  => true,
         'menu_icon'     => 'dashicons-email-alt',
         'menu_position' => 25,
-        'supports'      => array('title'), // нам нужен только заголовок; остальные данные — в мета-полях
+        'supports'      => array('title'),
         'capability_type' => 'post',
     );
 

@@ -67,7 +67,6 @@
     }
   }
 
-  // Бургер — виден только на планшете/мобильном
   &__burger {
     display: none;
     flex-direction: column;
@@ -88,7 +87,6 @@
     }
   }
 
-  // Полноэкранное мобильное меню
   &__mobile-menu {
     display: none;
     flex-direction: column;

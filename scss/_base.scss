@@ -36,7 +36,13 @@ body {
   margin: 0;
   font-family: $font-main;
   color: $color-text;
-  overflow-x: hidden; // страховка от горизонтального скролла из-за full-bleed слайдера объектов
+  overflow-x: hidden;
+}
+
+.page-wrap {
+  max-width: $max-content-width;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container {

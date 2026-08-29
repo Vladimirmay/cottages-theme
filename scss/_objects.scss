@@ -31,7 +31,7 @@
 
   &__main {
     flex-grow: 1;
-    min-width: 0; // чтобы слайдер мог сужаться и не распирал flex-родителя
+    min-width: 0;
   }
 
   &__head {
@@ -105,10 +105,8 @@
   }
 }
 
-// Слайды Swiper подстраиваются под высоту карточки, ширина карточки фиксирована
 .objects__slider {
-  overflow: hidden; // карточки, не влезающие целиком, скрываются полностью, а не обрезаются "внахлёст"
-
+  overflow: hidden;
   .swiper-slide {
     width: 416px;
     max-width: 416px;
@@ -122,7 +120,7 @@
 }
 
 .object-card {
-  width: 100%; // карточка заполняет слайд целиком
+  width: 100%;
   border-radius: 4px;
   overflow: hidden;
   cursor: pointer;

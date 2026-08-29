@@ -3,7 +3,7 @@
  * Подвал темы: закрытие main, футер и конец документа
  */
 ?>
-</main><!-- .site-main -->
+</main>
 
 <footer class="site-footer">
     <div class="site-footer__inner container">
@@ -37,6 +37,8 @@
 
     </div>
 </footer>
+
+</div>
 
 <?php wp_footer(); ?>
 </body>

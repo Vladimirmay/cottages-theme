@@ -7,6 +7,8 @@
 </head>
 <body <?php body_class(); ?>>
 
+<div class="page-wrap">
+
 <header class="site-header">
     <div class="site-header__inner container">
 

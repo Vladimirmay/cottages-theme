@@ -3,11 +3,10 @@
  * Часть шаблона: секция "Примеры объектов для инвестиций"
  */
 
-// Запрашиваем все опубликованные объекты
 $objects_query = new WP_Query(array(
     'post_type'      => 'object_item',
     'post_status'    => 'publish',
-    'posts_per_page' => -1,           // все объекты, без ограничения
+    'posts_per_page' => -1,
     'orderby'        => 'date',
     'order'          => 'DESC',
 ));

@@ -1,20 +1,27 @@
-// Слайдер растягивается на всю ширину окна браузера в обе стороны:
+// Слайдер растягивается на всю ширину .page-wrap в обе стороны:
 // соседние карточки не обрезаются искусственной границей внутри вёрстки,
-// а уходят за левый и правый край экрана. slidesOffsetBefore держит
-// первую карточку на исходном месте (вровень с заголовком секции).
+// а уходят за левый и правый край страницы (на широких мониторах — до края
+// ограниченной по max-width обёртки, а не до истинного края окна).
+// slidesOffsetBefore держит первую карточку на исходном месте
+// (вровень с заголовком секции).
 function initEdgeToEdgeSlider(el, swiperOptions) {
   if (!el) return;
 
   let swiper;
+  const pageWrap = document.querySelector(".page-wrap");
 
   function fitViewportEdges() {
     el.style.marginLeft = ""; // сброс перед замером текущей позиции слева
     el.style.width = "";
 
-    const offsetLeft = el.getBoundingClientRect().left;
+    const wrapRect = pageWrap
+      ? pageWrap.getBoundingClientRect()
+      : { left: 0, right: window.innerWidth };
+    const offsetLeft = el.getBoundingClientRect().left - wrapRect.left;
+    const trackWidth = wrapRect.right - wrapRect.left;
 
     el.style.marginLeft = -offsetLeft + "px";
-    el.style.width = window.innerWidth + "px";
+    el.style.width = trackWidth + "px";
 
     if (swiper) {
       swiper.params.slidesOffsetBefore = offsetLeft;
@@ -38,7 +45,7 @@ function initEdgeToEdgeSlider(el, swiperOptions) {
 
 document.addEventListener("DOMContentLoaded", function () {
   initEdgeToEdgeSlider(document.querySelector(".objects__slider"), {
-    slidesPerView: "auto", // ширина слайда задаётся в CSS (416px / 313px), Swiper сам считает, сколько влезает
+    slidesPerView: "auto",
     spaceBetween: 16,
     navigation: {
       nextEl: ".objects__arrow--next",
@@ -46,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  // Слайдер без стрелок навигации — активен только на планшете/мобилке (см. CSS)
   initEdgeToEdgeSlider(document.querySelector(".reasons__slider"), {
     slidesPerView: "auto",
     spaceBetween: 16,

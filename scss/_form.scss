@@ -96,7 +96,6 @@
       border-bottom-color: #fff;
     }
 
-    // Невалидное состояние: красная линия + красный текст
     &--invalid {
       border-bottom-color: #ff4d4d;
       color: #ff4d4d;
@@ -106,7 +105,7 @@
       }
     }
   }
-  // Группа радио-кнопок
+
   &__radio-group {
     margin-bottom: 32px;
   }
@@ -129,7 +128,6 @@
     cursor: pointer;
     font-size: 16px;
 
-    // Прячем настоящий input, рисуем свой кружок
     input {
       position: absolute;
       opacity: 0;
@@ -151,7 +149,6 @@
     transition: border-color 0.2s;
   }
 
-  // Точка внутри выбранного радио
   &__radio input:checked + &__radio-mark::after {
     content: "";
     position: absolute;
@@ -164,7 +161,6 @@
     background: #fff;
   }
 
-  // Кнопка отправки
   &__submit {
     width: 100%;
     background: #fff;
@@ -182,7 +178,6 @@
     }
   }
 
-  // Чекбокс согласия
   &__consent {
     display: flex;
     align-items: flex-start;
@@ -207,7 +202,6 @@
     transition: border-color 0.2s;
   }
 
-  // Галочка в выбранном чекбоксе
   &__consent input:checked + &__consent-mark::after {
     content: "";
     position: absolute;
@@ -231,7 +225,6 @@
     }
   }
 
-  // Общий статус отправки
   &__status {
     margin-top: 20px;
     font-size: 15px;
