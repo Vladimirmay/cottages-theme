@@ -3,6 +3,11 @@
 .section--about {
   padding-top: 80px;
   padding-bottom: 80px;
+
+  @media (max-width: $bp-tablet) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 .about {

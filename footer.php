@@ -21,11 +21,11 @@
         <div class="site-footer__nav">
             <p class="site-footer__label">Навигация</p>
             <nav class="site-footer__links">
-                <a href="#prodazha">Продажа</a>
-                <a href="#arenda">Аренда</a>
-                <a href="#posutochno">Посуточно</a>
-                <a href="#zhurnal">Журнал</a>
-                <a href="#investicii">Инвестиции</a>
+                <a href="#reasons">Почему именно мы</a>
+                <a href="#about">Коротко о нас</a>
+                <a href="#cycle">Этапы инвестиций</a>
+                <a href="#objects">Актуальные предложения</a>
+                <a href="#contact">Оставьте заявку</a>
             </nav>
         </div>
 

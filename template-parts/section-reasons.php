@@ -59,7 +59,7 @@ $reasons = array(
             <?php endforeach; ?>
         </div>
 
-        <!-- Планшет/мобилка: слайдер без стрелок -->
+        <!-- Планшет/мобилка: слайдер -->
         <div class="reasons__slider swiper">
             <div class="swiper-wrapper">
                 <?php foreach ($reasons as $index => $reason) : ?>

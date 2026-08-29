@@ -13,11 +13,11 @@
         <a href="<?php echo esc_url( home_url('/') ); ?>" class="site-header__logo">FundHouse</a>
 
         <nav class="site-header__nav">
-            <a href="#prodazha">Продажа</a>
-            <a href="#arenda">Аренда</a>
-            <a href="#posutochno">Посуточно</a>
-            <a href="#zhurnal">Журнал</a>
-            <a href="#investicii">Инвестиции</a>
+            <a href="#reasons">Почему именно мы</a>
+            <a href="#about">Коротко о нас</a>
+            <a href="#cycle">Этапы инвестиций</a>
+            <a href="#objects">Актуальные предложения</a>
+            <a href="#contact">Оставьте заявку</a>
         </nav>
 
         <div class="site-header__actions">
@@ -44,11 +44,11 @@
         </div>
 
         <nav class="site-header__mobile-nav">
-            <a href="#prodazha">Продажа</a>
-            <a href="#arenda">Аренда</a>
-            <a href="#posutochno">Посуточно</a>
-            <a href="#zhurnal">Журнал</a>
-            <a href="#investicii">Инвестиции</a>
+            <a href="#reasons">Почему именно мы</a>
+            <a href="#about">Коротко о нас</a>
+            <a href="#cycle">Этапы инвестиций</a>
+            <a href="#objects">Актуальные предложения</a>
+            <a href="#contact">Оставьте заявку</a>
         </nav>
 
         <div class="site-header__mobile-actions container">

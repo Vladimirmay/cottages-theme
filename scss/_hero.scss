@@ -3,6 +3,10 @@
 .section--hero {
   padding-top: 40px;
   padding-bottom: 40px;
+
+  @media (max-width: $bp-mobile) {
+    padding-bottom: 0;
+  }
 }
 
 .hero {
@@ -148,6 +152,10 @@
         0 100%,
         0 40px
       );
+
+      @media (max-width: $bp-mobile) {
+        height: 330px;
+      }
     }
 
     @media (max-width: $bp-tablet) {

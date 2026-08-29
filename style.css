@@ -1,11 +1,4 @@
 @charset "UTF-8";
-/*
-Theme Name: Cottages Theme
-Author: Vladimir May
-Description: Кастомная тема для проекта Investments in Cottages
-Version: 1.0.0
-Text Domain: cottages-theme
-*/
 @font-face {
   font-family: "NT Somic";
   src: url("fonts/NTSomic-Regular.woff2") format("woff2");
@@ -29,6 +22,10 @@ Text Domain: cottages-theme
 }
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -231,6 +228,11 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
 }
+@media (max-width: 768px) {
+  .section--hero {
+    padding-bottom: 0;
+  }
+}
 
 .hero__top {
   display: flex;
@@ -363,6 +365,11 @@ body {
   object-fit: cover;
   display: block;
   clip-path: polygon(40px 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0 40px);
+}
+@media (max-width: 768px) {
+  .hero__image img {
+    height: 330px;
+  }
 }
 @media (max-width: 960px) {
   .hero__image {
@@ -795,6 +802,7 @@ body {
   width: 100%;
   border-radius: 4px;
   overflow: hidden;
+  cursor: pointer;
 }
 .object-card__image {
   position: relative;
@@ -1036,6 +1044,12 @@ body {
   padding-top: 80px;
   padding-bottom: 80px;
 }
+@media (max-width: 960px) {
+  .section--about {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
 
 .about__head {
   display: flex;
@@ -1220,6 +1234,10 @@ body {
 .reasons__card--dark .reasons__card-text {
   color: #aaa;
 }
+.reasons__card--dark .reasons__number {
+  background: #fff;
+  color: #262626;
+}
 .reasons__number {
   display: inline-flex;
   align-items: center;
@@ -1228,8 +1246,8 @@ body {
   height: 34px;
   flex-shrink: 0;
   border-radius: 2px;
-  background: #fff;
-  color: #262626;
+  background: #262626;
+  color: #fff;
   font-size: 16px;
   font-weight: 800;
 }
