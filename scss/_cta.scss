@@ -50,6 +50,10 @@
   &__main {
     flex-grow: 1;
     max-width: 620px;
+
+    @media (max-width: $bp-mobile) {
+      max-width: 100%;
+    }
   }
 
   &__title {

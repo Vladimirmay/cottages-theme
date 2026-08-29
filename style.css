@@ -1009,6 +1009,11 @@ body {
   flex-grow: 1;
   max-width: 620px;
 }
+@media (max-width: 768px) {
+  .cta__main {
+    max-width: 100%;
+  }
+}
 .cta__title {
   font-size: 41px;
   line-height: 1.15;

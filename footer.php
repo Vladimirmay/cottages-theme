@@ -22,8 +22,8 @@
             <p class="site-footer__label">Навигация</p>
             <nav class="site-footer__links">
                 <a href="#reasons">Почему именно мы</a>
-                <a href="#about">Коротко о нас</a>
-                <a href="#cycle">Этапы инвестиций</a>
+                <a href="#about">О нас</a>
+                <a href="#cycle">Инвестиции</a>
                 <a href="#objects">Актуальные предложения</a>
                 <a href="#contact">Оставьте заявку</a>
             </nav>
